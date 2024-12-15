@@ -1,38 +1,30 @@
+"use client"
 import { Metadata } from "next";
 import App from "./app";
-
+import Main from "~/components/Main";
 const appUrl = process.env.NEXT_PUBLIC_URL;
+import { useState } from "react";
 
-const frame = {
-  version: "next",
-  imageUrl: `${appUrl}/opengraph-image`,
-  button: {
-    title: "Launch Frame",
-    action: {
-      type: "launch_frame",
-      name: "Farcaster Frames v2 Demo",
-      url: appUrl,
-      splashImageUrl: `${appUrl}/splash.png`,
-      splashBackgroundColor: "#f7f7f7",
-    },
-  },
-};
 
-export const revalidate = 300;
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Farcaster Frames v2 Demo",
-    openGraph: {
-      title: "Farcaster Frames v2 Demo",
-      description: "A Farcaster Frames v2 demo app.",
-    },
-    other: {
-      "fc:frame": JSON.stringify(frame),
-    },
-  };
-}
 
 export default function Home() {
-  return (<App />);
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedGame, setSelectedGame] = useState('');
+
+  const handleGameSelect = (game: string) => {
+    setIsLoading(true);
+    setSelectedGame(game);
+    // Add your game loading/routing logic here
+    setIsLoading(false);
+  };
+
+  return (
+    <>
+    <Main
+     isLoading={isLoading}
+      selectedGame={selectedGame}
+      onGameSelect={handleGameSelect}/>
+    </>
+  );
 }
