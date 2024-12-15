@@ -37,7 +37,7 @@ const Main: React.FC<Main> = ({ isLoading, selectedGame, onGameSelect }) => {
 
   return (
     <div className="bg-[url('/bg/BG.png')] text-white min-h-screen w-full">
-       <ConnectButton client={client} />
+       {/* <ConnectButton client={client} /> */}
       <div className="flex items-center justify-between rounded-xl border border-pink-500/30 bg-gradient-to-r from-pink-500/10 to-transparent p-3">
       <Image
               src="/gameimg/atlas.png"
