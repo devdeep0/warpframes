@@ -1,6 +1,6 @@
 "use client"
 import { Metadata } from "next";
-import App from "./app";
+
 import Main from "~/components/Main";
 const appUrl = process.env.NEXT_PUBLIC_URL;
 import { useState } from "react";
