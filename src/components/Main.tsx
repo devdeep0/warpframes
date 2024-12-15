@@ -3,6 +3,11 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation' // Add this import
 import Image from 'next/image'
+import { useActiveAccount } from "thirdweb/react";
+import { client } from "../app/client";
+import { AutoConnect } from "thirdweb/react";
+import { ConnectButton } from "thirdweb/react";
+
 interface Main {
   isLoading: boolean;
   selectedGame: string;
@@ -12,7 +17,7 @@ interface Main {
 const Main: React.FC<Main> = ({ isLoading, selectedGame, onGameSelect }) => {
   const [logs, setLogs] = useState<string[]>([]);
   const router = useRouter(); // Add this
-
+  const address = useActiveAccount()?.address;
   const addLog = (message: string) => {
     setLogs(prev => [...prev, `${new Date().toLocaleTimeString()}: ${message}`]);
   };
@@ -32,6 +37,7 @@ const Main: React.FC<Main> = ({ isLoading, selectedGame, onGameSelect }) => {
 
   return (
     <div className="bg-[url('/bg/BG.png')] text-white min-h-screen w-full">
+       <ConnectButton client={client} />
       <div className="flex items-center justify-between rounded-xl border border-pink-500/30 bg-gradient-to-r from-pink-500/10 to-transparent p-3">
       <Image
               src="/gameimg/atlas.png"
