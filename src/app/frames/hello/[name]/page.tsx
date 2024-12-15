@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import App from "~/app/app";
 
 const appUrl = process.env.NEXT_PUBLIC_URL;
 
@@ -43,5 +42,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HelloNameFrame({ params }: Props) {
   const { name } = await params;
 
-  return <App title={`Hello, ${name}`} />;
+  return(<></>);
 }
