@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 import Main from "~/components/Main";
 const appUrl = process.env.NEXT_PUBLIC_URL;
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 
@@ -18,6 +18,8 @@ export default function Home() {
     // Add your game loading/routing logic here
     setIsLoading(false);
   };
+
+
 
   return (
     <>
