@@ -15,10 +15,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     version: "next",
     imageUrl: `${appUrl}/frames/hello/${name}/opengraph-image`,
     button: {
-      title: "Launch Frame",
+      title: "Rupture Labs Framss",
       action: {
-        type: "launch_frame",
-        name: "Farcaster Frames v2 Demo",
+        type: "launch",
+        name: "Rupture Labs Frames",
         url: `${appUrl}/frames/hello/${name}/`,
         splashImageUrl: `${appUrl}/splash.png`,
         splashBackgroundColor: "#f7f7f7",
