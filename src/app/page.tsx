@@ -7,6 +7,37 @@ import { useState, useEffect } from "react";
 
 
 
+const frame = {
+  version: "next",
+  imageUrl: `${appUrl}/opengraph-image`,
+  button: {
+    title: "Ruture Labs",
+    action: {
+      type: "launch_frame",
+      name: "Rupture Labs",
+      url: appUrl,
+      splashImageUrl: `${appUrl}/splash.png`,
+      splashBackgroundColor: "#f7f7f7",
+    },
+  },
+};
+
+export const revalidate = 300;
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Rupture Lbas",
+    openGraph: {
+      title: "Rupture Labs",
+      description: "Play it out and enjoy",
+    },
+    other: {
+      "fc:frame": JSON.stringify(frame),
+    },
+  };
+}
+
+
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
