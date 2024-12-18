@@ -1,0 +1,18 @@
+{
+    "accountAssociation": {
+      "header": "eyJmaWQiOjg4MzksInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhCQ0FmZkNhMWFDNjUzYjQ0N0FCMzEyZTI1MTM4OWQ3MjY0M0QyYTlFIn0",
+      "payload": "eyJkb21haW4iOiJ3YXJwZnJhbWVzLnZlcmNlbC5hcHAifQ",
+      "signature": "MHg3N2JjNWNiZmM1NDFkMjNlNGE3N2M3NWZjMjM5NjkyZGZmZGM4ZWIxMzY0ZjhlZTFjYTYyM2Y4N2Q0OWYyMWJiNGMzMzlhYTNmODY5NjE2NDhmMmI3ZjEyMzJiM2UxNTc0MjhiMDEwNjE0MjA2YzkyMGYyNzBkYzNkODI4ZmZlOTFj"
+    },
+    "frame": {
+      "version": "1",
+      "name": "Rupture Labs",
+      "iconUrl": "https://warpframes.vercel.app/icon.png",
+      "homeUrl": "https://warpframes.vercel.app/",
+      "imageUrl": "https://warpframes.vercel.app/image.png",
+      "buttonTitle": "Play",
+      "splashImageUrl": "https://warpframes.vercel.app/splash.png",
+      "splashBackgroundColor": "#eeccff",
+      "webhookUrl": "https://warpframes.vercel.app/api/webhook"
+    }
+  }
