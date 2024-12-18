@@ -1,11 +1,7 @@
-"use client"
 import { Metadata } from "next";
+import { ClientPage } from "./ClientRender";
 
-import Main from "~/components/Main";
 const appUrl = process.env.NEXT_PUBLIC_URL;
-import { useState, useEffect } from "react";
-
-
 
 const frame = {
   version: "next",
@@ -24,9 +20,9 @@ const frame = {
 
 export const revalidate = 300;
 
-export async function generateMetadata(): Promise<Metadata> {
+export const generateMetadata = (): Metadata => {
   return {
-    title: "Rupture Lbas",
+    title: "Rupture Labs",
     openGraph: {
       title: "Rupture Labs",
       description: "Play it out and enjoy",
@@ -35,29 +31,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "fc:frame": JSON.stringify(frame),
     },
   };
-}
-
-
+};
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedGame, setSelectedGame] = useState('');
-
-  const handleGameSelect = (game: string) => {
-    setIsLoading(true);
-    setSelectedGame(game);
-    // Add your game loading/routing logic here
-    setIsLoading(false);
-  };
-
-
-
-  return (
-    <>
-    <Main
-     isLoading={isLoading}
-      selectedGame={selectedGame}
-      onGameSelect={handleGameSelect}/>
-    </>
-  );
+  return <ClientPage />;
 }
