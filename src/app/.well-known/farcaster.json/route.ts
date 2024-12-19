@@ -10,13 +10,14 @@ export async function GET() {
         "MHhiNDIwMzQ1MGZkNzgzYTExZjRiOTllZTFlYjA3NmMwOTdjM2JkOTY1NGM2ODZjYjkyZTAyMzk2Y2Q0YjU2MWY1MjY5NjI5ZGQ5NTliYjU0YzEwOGI4OGVmNjdjMTVlZTdjZDc2YTRiMGU5NzkzNzA3YzkxYzFkOWFjNTg0YmQzNjFi",
     },
     frame: {
-      version: "0.0.0",
-      name: "Frames v2 Demo",
+      version: "1",
+      name: "Rupture Labs Farcaster",
       iconUrl: `${appUrl}/icon.png`,
-      splashImageUrl: `${appUrl}/splash.png`,
-      splashBackgroundColor: "#f7f7f7",
       homeUrl: appUrl,
-      webhookUrl: `${appUrl}/api/webhook`,
+      imageUrl: `${appUrl}/frame.png`,
+      buttonTitle: "Launch Frame",
+      splashImageUrl: `${appUrl}/splash.png`,
+      splashBackgroundColor: "#0f172a",
     },
   };
 
